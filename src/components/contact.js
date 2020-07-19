@@ -9,28 +9,26 @@ export default class Contact extends Component {
             <h2 className="text-center">Contact</h2>
           </div>
           <form
-            action={`https://formspree.io/${this.props.data}`}
             name="contact"
-            method="POST"
-            data-netlify="true"
+            netlify
           >
             <div>
               <label>
-                Your Name: <input type="text" name="name" required />
+                Nome: <input type="text" name="name" required />
               </label>
             </div>
             <div>
               <label>
-                Your Email: <input type="email" name="email" required />
+                Email: <input type="email" name="email" required />
               </label>
             </div>
             <div>
               <label>
-                Message: <textarea name="message" required></textarea>
+                Mensagem: <textarea name="message" required></textarea>
               </label>
             </div>
             <div>
-              <button type="submit">Send</button>
+              <button type="submit">Enviar</button>
             </div>
           </form>
         </div>
