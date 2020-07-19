@@ -1,16 +1,16 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { StaticQuery, graphql } from "gatsby";
-import "bootstrap/dist/css/bootstrap.css";
+import React from 'react'
+import PropTypes from 'prop-types'
+import { StaticQuery, graphql } from 'gatsby'
+import 'bootstrap/dist/css/bootstrap.css'
 
-import Header from "./header";
-import Footer from "./footer";
+import Header from './header'
+import Footer from './footer'
 
-import "../css/style.css";
-import "../css/font-awesome.css";
+import '../css/style.css'
+import '../css/font-awesome.css'
 
-if (typeof window !== "undefined") {
-  require("smooth-scroll")('a[href*="#"]');
+if (typeof window !== 'undefined') {
+  require('smooth-scroll')('a[href*="#"]')
 }
 
 const Layout = ({ children, header }) => (
@@ -29,7 +29,7 @@ const Layout = ({ children, header }) => (
         }
       }
     `}
-    
+
     render={data => (
       <>
         <Header
@@ -44,10 +44,10 @@ const Layout = ({ children, header }) => (
       </>
     )}
   />
-);
+)
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
-};
+}
 
-export default Layout;
+export default Layout

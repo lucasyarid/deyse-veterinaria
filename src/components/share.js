@@ -1,10 +1,10 @@
-import React from "react";
-import PropTypes from "prop-types";
+import React from 'react'
+import PropTypes from 'prop-types'
 import {
   FacebookShareButton,
   TwitterShareButton,
   WhatsappShareButton
-} from "react-share";
+} from 'react-share'
 
 const Share = ({ socialConfig }) => {
   return (
@@ -41,8 +41,8 @@ const Share = ({ socialConfig }) => {
         <span className="text">WhatsApp</span>
       </WhatsappShareButton>
     </div>
-  );
-};
+  )
+}
 
 Share.propTypes = {
   socialConfig: PropTypes.shape({
@@ -53,9 +53,9 @@ Share.propTypes = {
     })
   }).isRequired,
   tags: PropTypes.arrayOf(PropTypes.string)
-};
+}
 Share.defaultProps = {
   tags: []
-};
+}
 
-export default Share;
+export default Share

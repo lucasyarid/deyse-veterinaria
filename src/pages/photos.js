@@ -1,28 +1,28 @@
-import React, { Component } from "react";
-import Img from "gatsby-image";
-import { graphql } from "gatsby";
+import React, { Component } from 'react'
+import Img from 'gatsby-image'
+import { graphql } from 'gatsby'
 
-import Layout from "../components/layout";
-import SEO from "../components/seo";
+import Layout from '../components/layout'
+import SEO from '../components/seo'
 
 export default class PhotosPage extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       activePopup: false,
       selectedItem: 0
-    };
+    }
   }
 
-  render() {
-    const { data } = this.props;
-    const { activePopup, selectedItem } = this.state;
+  render () {
+    const { data } = this.props
+    const { activePopup, selectedItem } = this.state
 
     return (
       <Layout>
         <SEO
           title="Photos"
-          keywords={[`Rohit Gupta`, `Frontend Developer`, `Developer`, `Photo`]}
+          keywords={['Rohit Gupta', 'Frontend Developer', 'Developer', 'Photo']}
         />
         <div className="site-container blogs-page" id="Blogs">
           <div className="container">
@@ -39,7 +39,7 @@ export default class PhotosPage extends Component {
                         this.setState({
                           activePopup: true,
                           selectedItem: index
-                        });
+                        })
                       }}
                     >
                       <Img
@@ -49,7 +49,7 @@ export default class PhotosPage extends Component {
                       />
                     </div>
                   </li>
-                );
+                )
               })}
             </ul>
             {activePopup ? (
@@ -59,7 +59,7 @@ export default class PhotosPage extends Component {
                   onClick={() => {
                     this.setState({
                       activePopup: false
-                    });
+                    })
                   }}
                 ></span>
 
@@ -69,7 +69,7 @@ export default class PhotosPage extends Component {
                     onClick={() => {
                       this.setState({
                         activePopup: false
-                      });
+                      })
                     }}
                   ></i>
                   <img
@@ -79,12 +79,12 @@ export default class PhotosPage extends Component {
                 </div>
               </div>
             ) : (
-              ""
+              ''
             )}
           </div>
         </div>
       </Layout>
-    );
+    )
   }
 }
 export const pageQuery = graphql`
@@ -106,4 +106,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`;
+`

@@ -1,5 +1,5 @@
-import React from "react";
-import Img from "gatsby-image";
+import React from 'react'
+import Img from 'gatsby-image'
 
 const Header = ({ data }) => (
   <div className="about section" id="About">
@@ -16,7 +16,7 @@ const Header = ({ data }) => (
           <div className="about-details">
             <span className="name">My Name is {data.name}.</span>
             <h2 className="sub-position">
-              I'm a Professional {data.designation}.
+              Sou uma {data.designation}.
             </h2>
             <div
               dangerouslySetInnerHTML={{
@@ -64,6 +64,6 @@ const Header = ({ data }) => (
       </div>
     </div>
   </div>
-);
+)
 
-export default Header;
+export default Header

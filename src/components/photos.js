@@ -1,7 +1,7 @@
-import React, { Component } from "react";
-import Slider from "react-slick";
-import { Link } from "gatsby";
-import Img from "gatsby-image";
+import React, { Component } from 'react'
+import Slider from 'react-slick'
+import { Link } from 'gatsby'
+import Img from 'gatsby-image'
 var settings = {
   dots: true,
   speed: 500,
@@ -28,11 +28,11 @@ var settings = {
       }
     }
   ]
-};
+}
 
 export default class Photos extends Component {
-  render() {
-    const { data } = this.props;
+  render () {
+    const { data } = this.props
 
     return (
       <div className="photos section" id="Photos">
@@ -51,7 +51,7 @@ export default class Photos extends Component {
                       objectPosition="50% 50%"
                     />
                   </div>
-                );
+                )
               })}
             </Slider>
           </div>
@@ -62,6 +62,6 @@ export default class Photos extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

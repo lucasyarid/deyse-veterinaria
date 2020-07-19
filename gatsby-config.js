@@ -1,47 +1,47 @@
-const dotenv = require("dotenv");
+const dotenv = require('dotenv')
 
-if (process.env.ENVIRONMENT !== "production") {
-  dotenv.config();
+if (process.env.ENVIRONMENT !== 'production') {
+  dotenv.config()
 }
 
-const { spaceId, accessToken } = process.env;
+const { spaceId, accessToken } = process.env
 
 module.exports = {
   siteMetadata: {
-    title: `Veterinária Deyse Ribeiro`,
-    description: `Professional website`,
-    author: `@lucasyarid`
+    title: 'Veterinária Deyse Ribeiro',
+    description: 'Professional website',
+    author: '@lucasyarid'
   },
   plugins: [
-    `gatsby-plugin-react-helmet`,
+    'gatsby-plugin-react-helmet',
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `images`,
+        name: 'images',
         path: `${__dirname}/src/images`
       }
     },
     {
-      resolve: "gatsby-source-contentful",
+      resolve: 'gatsby-source-contentful',
       options: {
         spaceId,
         accessToken
       }
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-remark`,
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-transformer-remark',
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        name: `Veterinária Deyse Ribeiro`,
-        short_name: `Deyse Ribeiro`,
-        start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#333`,
-        icon: `src/images/favicon-32x32.png` // This path is relative to the root of the site.
+        name: 'Veterinária Deyse Ribeiro',
+        short_name: 'Deyse Ribeiro',
+        start_url: '/',
+        background_color: '#663399',
+        theme_color: '#333',
+        icon: 'src/images/favicon-32x32.png' // This path is relative to the root of the site.
       }
     }, // To learn more, visit: https://gatsby.dev/offline // this (optional) plugin enables Progressive Web App + Offline functionality
-    `gatsby-plugin-offline`
+    'gatsby-plugin-offline'
   ]
-};
+}

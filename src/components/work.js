@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Img from "gatsby-image";
+import React, { Component } from 'react'
+import Img from 'gatsby-image'
 
 export default class work extends Component {
-  render() {
-    const { data } = this.props;
+  render () {
+    const { data } = this.props
     return (
       <div className="work section" id="Work">
         <div className="container">
@@ -25,11 +25,11 @@ export default class work extends Component {
                     </a>
                   </div>
                 </li>
-              );
+              )
             })}
           </ul>
         </div>
       </div>
-    );
+    )
   }
 }

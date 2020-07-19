@@ -1,7 +1,7 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export default class Contact extends Component {
-  render() {
+  render () {
     return (
       <div className="contact section" id="Contact">
         <div className="container">
@@ -36,6 +36,6 @@ export default class Contact extends Component {
           </form>
         </div>
       </div>
-    );
+    )
   }
 }

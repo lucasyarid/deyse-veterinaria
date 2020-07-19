@@ -1,19 +1,19 @@
-import { Link } from "gatsby";
-import React, { Component } from "react";
+import { Link } from 'gatsby'
+import React, { Component } from 'react'
 
 export default class Header extends Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
       menu: false
-    };
+    }
   }
 
-  render() {
-    const { data, header } = this.props;
-    const { menu } = this.state;
+  render () {
+    const { data, header } = this.props
+    const { menu } = this.state
     return (
-      <header className={`site-header ${menu ? "active" : ""}`}>
+      <header className={`site-header ${menu ? 'active' : ''}`}>
         <div className="container">
           <div className="header-main">
             <div className="logo">
@@ -30,86 +30,86 @@ export default class Header extends Component {
               onClick={() => {
                 this.setState({
                   menu: !menu
-                });
+                })
               }}
             >
               <span></span>
             </div>
-            {header === "home" ? (
+            {header === 'home' ? (
               <div className="menu">
                 <ul
                   onClick={() => {
                     this.setState({
                       menu: false
-                    });
+                    })
                   }}
                 >
                   <li>
                     <Link to="/#home">Home</Link>
                   </li>
                   {data.menus
-                    .filter(item => item === "About")
-                    .map(t => {
+                    .filter(item => item === 'About')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#About`}>About</Link>
+                        <li key={key}>
+                          <Link to={'/#About'}>About</Link>
                         </li>
-                      );
+                      )
                     })}
                   {data.menus
-                    .filter(item => item === "Service")
-                    .map(t => {
+                    .filter(item => item === 'Service')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#Service`}>Service</Link>
+                        <li key={key}>
+                          <Link to={'/#Service'}>Service</Link>
                         </li>
-                      );
+                      )
                     })}
                   {data.menus
-                    .filter(item => item === "Blogs")
-                    .map(t => {
+                    .filter(item => item === 'Blogs')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#Blogs`}>Blogs</Link>
+                        <li key={key}>
+                          <Link to={'/#Blogs'}>Blogs</Link>
                         </li>
-                      );
+                      )
                     })}
 
                   {data.menus
-                    .filter(item => item === "Work")
-                    .map(t => {
+                    .filter(item => item === 'Work')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#Work`}>Work</Link>
+                        <li key={key}>
+                          <Link to={'/#Work'}>Work</Link>
                         </li>
-                      );
+                      )
                     })}
                   {data.menus
-                    .filter(item => item === "Testimonials")
-                    .map(t => {
+                    .filter(item => item === 'Testimonials')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#Testimonials`}>Testimonials</Link>
+                        <li key={key}>
+                          <Link to={'/#Testimonials'}>Testimonials</Link>
                         </li>
-                      );
+                      )
                     })}
                   {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
+                    .filter(item => item === 'Photos')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#Photos`}>Photos</Link>
+                        <li key={key}>
+                          <Link to={'/#Photos'}>Photos</Link>
                         </li>
-                      );
+                      )
                     })}
                   {data.menus
-                    .filter(item => item === "Contact")
-                    .map(t => {
+                    .filter(item => item === 'Contact')
+                    .map((t, key) => {
                       return (
-                        <li>
-                          <Link to={`/#Contact`}>Contact</Link>
+                        <li key={key}>
+                          <Link to={'/#Contact'}>Contact</Link>
                         </li>
-                      );
+                      )
                     })}
                 </ul>
               </div>
@@ -119,29 +119,29 @@ export default class Header extends Component {
                   onClick={() => {
                     this.setState({
                       menu: false
-                    });
+                    })
                   }}
                 >
                   <li>
                     <Link to="/#home">Home</Link>
                   </li>
                   {data.menus
-                    .filter(item => item === "Blogs")
-                    .map(t => {
+                    .filter(item => item === 'Blogs')
+                    .map((t, key) => {
                       return (
-                        <li>
+                        <li key={key}>
                           <Link to="/blogs">Blogs</Link>
                         </li>
-                      );
+                      )
                     })}
                   {data.menus
-                    .filter(item => item === "Photos")
-                    .map(t => {
+                    .filter(item => item === 'Photos')
+                    .map((t, key) => {
                       return (
-                        <li>
+                        <li key={key}>
                           <Link to="/photos">Photos</Link>
                         </li>
-                      );
+                      )
                     })}
                 </ul>
               </div>
@@ -149,6 +149,6 @@ export default class Header extends Component {
           </div>
         </div>
       </header>
-    );
+    )
   }
 }

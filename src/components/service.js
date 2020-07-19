@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 
 export default class service extends Component {
-  render() {
-    const { data } = this.props;
+  render () {
+    const { data } = this.props
     return (
       <div className="service section" id="Service">
         <div className="container">
@@ -22,11 +22,11 @@ export default class service extends Component {
                     />
                   </div>
                 </div>
-              );
+              )
             })}
           </div>
         </div>
       </div>
-    );
+    )
   }
 }

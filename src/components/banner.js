@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Img from "gatsby-image";
+import React, { Component } from 'react'
+import Img from 'gatsby-image'
 
 export default class Banner extends Component {
-  render() {
-    const { data } = this.props;
+  render () {
+    const { data } = this.props
     return (
       <div className="banner">
         <Img
@@ -14,10 +14,10 @@ export default class Banner extends Component {
         <div className="container">
           <div className="banner-details">
             <span>Hello...</span>
-            <h1>I'm {data.designation}.</h1>
+            <h1>Sou {data.designation}.</h1>
             <ul className="sub-data">
               {data.bannerList.map((item, index) => {
-                return <li key={index}>{item}</li>;
+                return <li key={index}>{item}</li>
               })}
             </ul>
             <ul className="social">
@@ -41,6 +41,6 @@ export default class Banner extends Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
