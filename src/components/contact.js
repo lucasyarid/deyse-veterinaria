@@ -14,6 +14,7 @@ export default class Contact extends Component {
             method="POST"
             netlify
           >
+            <input type="hidden" name="form-name" value="contact" />
             <div>
               <label>
                 Nome: <input type="text" name="name" required />
