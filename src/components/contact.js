@@ -11,7 +11,7 @@ export default class Contact extends Component {
           <form
             name="contact"
             method="POST"
-            data-netlify="true"
+            netlify
           >
             <div>
               <label>
