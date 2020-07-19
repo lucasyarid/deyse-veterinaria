@@ -40,12 +40,6 @@ const IndexPage = ({ data }) => (
       })}
 
     {data.contentfulSiteInformation.menus
-      .filter(item => item === "Work")
-      .map(t => {
-        return <Work data={data.allContentfulWorks}></Work>;
-      })}
-
-    {data.contentfulSiteInformation.menus
       .filter(item => item === "Testimonials")
       .map(t => {
         return (
@@ -88,14 +82,9 @@ export const pageQuery = graphql`
         }
       }
       designation
-      age
-      facebook
-      github
       gmail
       id
       instagram
-      linkdin
-      twitter
       location
       description {
         childMarkdownRemark {
@@ -159,25 +148,6 @@ export const pageQuery = graphql`
           }
           avatarImage {
             fluid(maxWidth: 200) {
-              base64
-              aspectRatio
-              src
-              srcSet
-              srcWebp
-              srcSetWebp
-              sizes
-            }
-          }
-        }
-      }
-    }
-    allContentfulWorks {
-      edges {
-        node {
-          siteName
-          url
-          image {
-            fluid(maxWidth: 600) {
               base64
               aspectRatio
               src
