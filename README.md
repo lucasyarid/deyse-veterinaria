@@ -8,7 +8,7 @@ A veterinary about/blog/content built with Gatsby
     Use [contentful-cli](https://github.com/contentful/contentful-cli) to import the models from contentful-data.json
 
     ```
-    contentful space --space-id <CONTENTFUL_SPACE_ID> import --content-file contentful-data.json
+    contentful space --space-id <CONTENTFUL_spaceId> import --content-file contentful-data.json
     ```
 
     Then export/import data with:
@@ -20,7 +20,7 @@ A veterinary about/blog/content built with Gatsby
 
 1.  **Setup env**
 
-    Clone `.env.example` to `.env` and fill `SPACE_ID` and `ACCESS_TOKEN` with Contentful info found in `Settings > API Keys`.
+    Clone `.env.example` to `.env` and fill `spaceId` and `accessToken` with Contentful info found in `Settings > API Keys`.
 
     ```sh
     npm install
