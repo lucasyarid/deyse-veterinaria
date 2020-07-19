@@ -10,6 +10,7 @@ export default class Contact extends Component {
           </div>
           <form
             name="contact"
+            action="/success"
             method="POST"
             netlify
           >
