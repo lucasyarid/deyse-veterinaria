@@ -16,47 +16,34 @@ const IndexPage = ({ data }) => (
   <Layout header="home">
     <SEO
       title={data.contentfulAboutMe.designation}
-      keywords={['Rohit Gupta', 'Frontend Developer', 'Developer']}
     />
     <Banner data={data.contentfulAboutMe}></Banner>
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'About')
-      .map((t, key) => {
-        return <About key={key} data={data.contentfulAboutMe}></About>
-      })}
+      .map((t, key) => <About key={key} data={data.contentfulAboutMe}></About>)}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'Service')
-      .map((t, key) => {
-        return <Service key={key} data={data.allContentfulService}></Service>
-      })}
+      .map((t, key) => <Service key={key} data={data.allContentfulService}></Service>)}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'Blogs')
-      .map((t, key) => {
-        return <Blogs key={key} data={data.allContentfulBlogs}></Blogs>
-      })}
+      .map((t, key) => <Blogs key={key} data={data.allContentfulBlogs}></Blogs>)}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'Testimonials')
-      .map((t, key) => {
-        return (
-          <Testimonial key={key} data={data.allContentfulTestimonials}></Testimonial>
-        )
-      })}
+      .map((t, key) => (
+        <Testimonial key={key} data={data.allContentfulTestimonials}></Testimonial>
+      ))}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'Photos')
-      .map((t, key) => {
-        return <Photos key={key} data={data.contentfulPhotos}></Photos>
-      })}
+      .map((t, key) => <Photos key={key} data={data.contentfulPhotos}></Photos>)}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'Contact')
-      .map((t, key) => {
-        return <Contact key={key} data={data.contentfulAboutMe.gmail}></Contact>
-      })}
+      .map((t, key) => <Contact key={key} data={data.contentfulAboutMe.gmail}></Contact>)}
   </Layout>
 )
 

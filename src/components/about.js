@@ -1,7 +1,7 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-const Header = ({ data }) => (
+const About = ({ data }) => (
   <div className="about section" id="About">
     <div className="container">
       <div className="about-main row">
@@ -66,4 +66,4 @@ const Header = ({ data }) => (
   </div>
 )
 
-export default Header
+export default About

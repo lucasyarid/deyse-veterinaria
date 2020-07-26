@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.css'
 
@@ -31,7 +30,7 @@ const Layout = ({ children, header }) => (
     `}
 
     render={data => (
-      <>
+      <Fragment>
         <Header
           data={data.contentfulSiteInformation}
           siteTitle={data.contentfulSiteInformation.siteName}
@@ -41,13 +40,9 @@ const Layout = ({ children, header }) => (
           <main id="home">{children}</main>
         </div>
         <Footer siteName={data.contentfulSiteInformation.siteName} />
-      </>
+      </Fragment>
     )}
   />
 )
-
-Layout.propTypes = {
-  children: PropTypes.node.isRequired
-}
 
 export default Layout

@@ -30,38 +30,32 @@ var settings = {
   ]
 }
 
-export default class Photos extends Component {
-  render () {
-    const { data } = this.props
-
-    return (
-      <div className="photos section" id="Photos">
-        <div className="container">
-          <div className="section-head">
-            <h2>Photos</h2>
-          </div>
-          <div className="slider-section photos-list">
-            <Slider {...settings}>
-              {data.photos.slice(0, 9).map((item, index) => {
-                return (
-                  <div key={index} className="photos-item">
-                    <Img
-                      fixed={item.fluid}
-                      objectFit="cover"
-                      objectPosition="50% 50%"
-                    />
-                  </div>
-                )
-              })}
-            </Slider>
-          </div>
-          <div className="see-more">
-            <Link to="/photos">
-              <span>More Photo</span>
-            </Link>
-          </div>
-        </div>
+const Photos = ({ data }) => (
+  <div className="photos section" id="Photos">
+    <div className="container">
+      <div className="section-head">
+        <h2>Photos</h2>
       </div>
-    )
-  }
-}
+      <div className="slider-section photos-list">
+        <Slider {...settings}>
+          {data.photos.slice(0, 9).map((item, index) => (
+            <div key={index} className="photos-item">
+              <Img
+                fixed={item.fluid}
+                objectFit="cover"
+                objectPosition="50% 50%"
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+      <div className="see-more">
+        <Link to="/photos">
+          <span>More Photo</span>
+        </Link>
+      </div>
+    </div>
+  </div>
+)
+
+export default Photos

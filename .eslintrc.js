@@ -18,7 +18,8 @@ module.exports = {
     'react'
   ],
   rules: {
-    'react/prop-types': 0
+    'react/prop-types': 0,
+    'arrow-body-style': ['error', 'as-needed']
   },
   ignorePatterns: [
     'public',
