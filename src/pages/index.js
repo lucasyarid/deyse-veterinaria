@@ -21,7 +21,10 @@ const IndexPage = ({ data }) => (
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'About')
-      .map((t, key) => <About key={key} data={data.contentfulAboutMe}></About>)}
+      .map((t, key) => <About
+        key={key}
+        data={data.contentfulAboutMe}
+        details={data.allContentfulDetails.edges} />)}
 
     {data.contentfulSiteInformation.menus
       .filter(item => item === 'Service')
@@ -99,6 +102,15 @@ export const pageQuery = graphql`
               html
             }
           }
+        }
+      }
+    }
+    allContentfulDetails {
+      edges {
+        node {
+          id
+          title
+          description
         }
       }
     }

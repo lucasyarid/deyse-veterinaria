@@ -39,10 +39,10 @@ body{margin:0;background:#fafafe}
 .section:nth-child(even){background:#fff}
 .about-details .name{margin-bottom:10px;display:block}
 .about-details .sub-position{margin-bottom:10px;display:block}
-.about-details .details{padding:0;list-style:none;border-top:1px solid #000;padding-top:30px;margin-bottom:30px}
-.about-details .details li{display:flex;align-items:center;margin-bottom:10px}
-.about-details .details li p{margin:0}
-.about-details .details li strong{width:160px}
+.about-details .Details{padding:0;list-style:none;border-top:1px solid #000;padding-top:30px;margin-bottom:30px}
+.about-details .Details li{display:flex;align-items:center;margin-bottom:10px}
+.about-details .Details li p{margin:0}
+.about-details .Details li strong{width:160px}
 .about-details .socials ul{margin:0;padding:0;list-style:none;display:flex}
 .about-details .socials ul li{margin-right:10px}
 .about-details .socials ul li a{text-decoration:none;width:40px;height:40px;display:flex;justify-content:center;align-items:center;border:2px solid #333;color:#333;position:relative;overflow:hidden}
@@ -79,13 +79,13 @@ form>div{margin-bottom:15px}
 .blogs-list{display:flex;flex-wrap:wrap;list-style:none;padding:0;margin:0 -10px}
 .blogs-list .item{width:33.33%;padding:0 10px;margin-bottom:20px}
 .blogs-list .item .inner{text-align:left;-webkit-transition:0.5s all;transition:0.5s all;display:flex;position:relative;overflow:hidden}
-.blogs-list .item .inner .details{padding:20px 20px;position:absolute;width:100%;bottom:0;left:0;right:0;z-index:1;color:#fff}
+.blogs-list .item .inner .Details{padding:20px 20px;position:absolute;width:100%;bottom:0;left:0;right:0;z-index:1;color:#fff}
 .blogs-list .item .inner img{width:100%!important;-webkit-transition:0.3s all!important;transition:0.3s all!important}
 .blogs-list .item .inner:hover img{transform:scale(1.1)}
-.blogs-list .item .inner .details .title{margin-bottom:5px;text-shadow:1px 1px 4px #333}
-.blogs-list .item .inner .details .title a{color:#fff;font-size:24px;text-shadow:1px 1px 4px #333;text-decoration:none}
-.blogs-list .item .inner .details .date{display:block;margin-bottom:0;text-shadow:1px 1px 4px #333}
-.blogs-list .item .inner .details p{margin-bottom:0}
+.blogs-list .item .inner .Details .title{margin-bottom:5px;text-shadow:1px 1px 4px #333}
+.blogs-list .item .inner .Details .title a{color:#fff;font-size:24px;text-shadow:1px 1px 4px #333;text-decoration:none}
+.blogs-list .item .inner .Details .date{display:block;margin-bottom:0;text-shadow:1px 1px 4px #333}
+.blogs-list .item .inner .Details p{margin-bottom:0}
 .blogs-list .item .inner:after{content:"";position:absolute;top:0;bottom:0;left:0;right:0;width:100%;height:100%;background:#3333339c}
 .blogs-list .item:nth-child(1),
 .blogs-list .item:nth-child(2){width:50%}
@@ -114,7 +114,7 @@ h2:after,
 .blogs-list .item .no-image{height:250px;width:100%;text-align:center;background:#333333b8;display:flex;justify-content:center;align-items:center}
 .blogs-list .item:nth-child(1) .no-image,
 .blogs-list .item:nth-child(2) .no-image{height:300px}
-.blog-post .details img{margin:0 auto;float:none;display:block;margin-bottom:30px}
+.blog-post .Details img{margin:0 auto;float:none;display:block;margin-bottom:30px}
 pre{margin-bottom:0}
 .banner .gatsby-image-wrapper{height:100vh;width:100%}
 .about-main .left .gatsby-image-wrapper{width:100%;height:550px}
@@ -127,8 +127,8 @@ pre{margin-bottom:0}
 .photos-item .gatsby-image-wrapper{width:100%;height:200px}
 .site-container{padding:100px 0 20px 0}
 .blog-post .feature-img{width:100%;height:600px}
-.blog-post .details .date{margin-bottom:40px;display:block}
-.blog-post .details{padding:20px 0}
+.blog-post .Details .date{margin-bottom:40px;display:block}
+.blog-post .Details{padding:20px 0}
 .post-social{margin-bottom:40px}
 .post-social button{text-decoration:none;width:auto;height:auto;border:1px solid #333!important;color:#333!important;position:relative;overflow:hidden;padding:8px 20px!important;display:inline-block;font-weight:600;margin-right:10px}
 .post-social button:after{content:"";background:#333;position:absolute;top:-100%;left:0;-webkit-transition:0.3s all;transition:0.3s all;height:100%;width:100%;z-index:0}
@@ -167,12 +167,12 @@ pre{margin-bottom:0}
     0%{opacity:0;-webkit-transform:scale3d(0.3,0.3,0.3);transform:scale3d(0.3,0.3,0.3)}
     50%{opacity:1}
 }
-.blog-post .details .title{font-size:26px;margin-bottom:20px}
-.blog-post .details .date{font-size:14px;margin-bottom:30px}
-.blog-post .details h2{font-size:22px;line-height:26px;margin-bottom:20px}
-.blog-post .details h3{font-size:18px}
-.blog-post .details h4{font-size:16px}
-.blog-post .details ul li{font-size:14px}
+.blog-post .Details .title{font-size:26px;margin-bottom:20px}
+.blog-post .Details .date{font-size:14px;margin-bottom:30px}
+.blog-post .Details h2{font-size:22px;line-height:26px;margin-bottom:20px}
+.blog-post .Details h3{font-size:18px}
+.blog-post .Details h4{font-size:16px}
+.blog-post .Details ul li{font-size:14px}
 .photos-list .slick-list .slick-track{margin:0 -5px}
 .photos-list .slick-list .slick-track .slick-slide{padding:0 5px}
 code{background-color:#333;border-radius:3px;margin-bottom:30px;display:block;padding:15px!important;color:#fff !important}
@@ -215,8 +215,8 @@ code{background-color:#333;border-radius:3px;margin-bottom:30px;display:block;pa
     .banner .banner-details span{font-size:19px;margin-bottom:0}
     .blog-post .feature-img{height:300px}
     .post-social button{margin-bottom:10px;padding:5px 10px!important;font-size:12px!important}
-    .blogs-list .item .inner .details .date{font-size:12px}
-    .blogs-list .item .inner .details .title{font-size:20px}
+    .blogs-list .item .inner .Details .date{font-size:12px}
+    .blogs-list .item .inner .Details .title{font-size:20px}
 }
 @media only screen and (max-width:480px){
     .about-main .left .gatsby-image-wrapper{height:400px}
