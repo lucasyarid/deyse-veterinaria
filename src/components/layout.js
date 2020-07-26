@@ -2,7 +2,7 @@ import React, { Fragment } from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 import 'bootstrap/dist/css/bootstrap.css'
 
-import Header from './header'
+import { Header } from './Header'
 import Footer from './footer'
 
 import '../css/style.scss'

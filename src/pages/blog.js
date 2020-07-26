@@ -7,7 +7,7 @@ import moment from 'moment'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const Blogs = ({ data }) => (
+const Blog = ({ data }) => (
   <Layout>
     <SEO
       title="Blogs"
@@ -51,7 +51,7 @@ const Blogs = ({ data }) => (
   </Layout>
 )
 
-export default Blogs
+export default Blog
 
 export const pageQuery = graphql`
   query BlogsQuery {
