@@ -1,35 +1,9 @@
-@import './fonts/fonts.scss';
+@import './colors.scss';
+@import './fonts.scss';
+@import './main.scss';
 
-@-webkit-keyframes "zoomIn" {
-	0% {
-		opacity: 0;
-		-webkit-transform: scale3d(0.3, 0.3, 0.3);
-		transform: scale3d(0.3, 0.3, 0.3);
-	}
-	50% {
-		opacity: 1;
-	}
-}
-@keyframes "zoomIn" {
-	0% {
-		opacity: 0;
-		-webkit-transform: scale3d(0.3, 0.3, 0.3);
-		transform: scale3d(0.3, 0.3, 0.3);
-	}
-	50% {
-		opacity: 1;
-	}
-}
-:root {
-	--white: #fff;
-	--black: #333;
-	--red: #d83d0a;
-}
-img {
-	max-width: 100%;
-}
 .site-header {
-	background: var(--drark-gray);
+	background: var(--secondary-transparent);
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -89,7 +63,7 @@ img {
 a {
 	color: #ef5826;
 	&:hover {
-		color: var(--red);
+		color: var(--primary);
 		text-decoration: underline;
 	}
 }
@@ -407,7 +381,7 @@ body {
 	}
 	li.slick-active {
 		button {
-			background: red;
+			background: var(--primary);
 		}
 	}
 }
@@ -613,7 +587,7 @@ form {
 			height: 250px;
 			width: 100%;
 			text-align: center;
-			background: var(--drark-gray);
+			background: var(--black);
 			display: flex;
 			justify-content: center;
 			align-items: center;
@@ -743,8 +717,7 @@ form {
 }
 .site-footer {
 	padding: 20px;
-	background: var(--black);
-	margin-bottom: 10px;
+	background: var(--secondary);
 	text-align: center;
 	color: var(--white);
 }
