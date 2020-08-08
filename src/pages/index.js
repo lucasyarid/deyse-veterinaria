@@ -27,8 +27,6 @@ const IndexPage = ({ data }) => (
 
     <Blogs data={data.allContentfulBlogs} />
 
-    <Testimonial data={data.allContentfulTestimonials} />
-
     <Photos data={data.contentfulPhotos} />
 
     <Contact data={data.contentfulAboutMe.gmail} />

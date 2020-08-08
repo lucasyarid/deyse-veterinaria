@@ -10,8 +10,8 @@ const Banner = ({ data }) => (
     />
     <div className="container">
       <div className="banner-details">
-        <span>Hello...</span>
-        <h1>Sou {data.designation}.</h1>
+        <h1>{data.name}</h1>
+        <span>{data.designation}</span>
         <ul className="sub-data">
           {data.bannerList.map((item, index) => <li key={index}>{item}</li>)}
         </ul>
