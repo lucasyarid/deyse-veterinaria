@@ -9,8 +9,6 @@ export const Header = ({ data, header }) => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
   const closeMenu = () => setIsMenuOpen(false)
 
-  console.log('aqui', data.menus)
-
   return (
     <header className={`site-header ${isMenuOpen ? 'active' : ''}`}>
       <div className="container">

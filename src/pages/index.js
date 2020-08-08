@@ -14,39 +14,24 @@ import Photos from '../components/photos'
 
 const IndexPage = ({ data }) => (
   <Layout header="home">
-    <SEO
-      title={data.contentfulAboutMe.designation}
+    <SEO title={data.contentfulAboutMe.designation} />
+
+    <Banner data={data.contentfulAboutMe} />
+
+    <About
+      data={data.contentfulAboutMe}
+      details={data.allContentfulDetails.edges}
     />
-    <Banner data={data.contentfulAboutMe}></Banner>
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === 'About')
-      .map((t, key) => <About
-        key={key}
-        data={data.contentfulAboutMe}
-        details={data.allContentfulDetails.edges} />)}
+    <Service data={data.allContentfulService} />
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === 'Service')
-      .map((t, key) => <Service key={key} data={data.allContentfulService}></Service>)}
+    <Blogs data={data.allContentfulBlogs} />
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === 'Blogs')
-      .map((t, key) => <Blogs key={key} data={data.allContentfulBlogs}></Blogs>)}
+    <Testimonial data={data.allContentfulTestimonials} />
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === 'Testimonials')
-      .map((t, key) => (
-        <Testimonial key={key} data={data.allContentfulTestimonials}></Testimonial>
-      ))}
+    <Photos data={data.contentfulPhotos} />
 
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === 'Photos')
-      .map((t, key) => <Photos key={key} data={data.contentfulPhotos}></Photos>)}
-
-    {data.contentfulSiteInformation.menus
-      .filter(item => item === 'Contact')
-      .map((t, key) => <Contact key={key} data={data.contentfulAboutMe.gmail}></Contact>)}
+    <Contact data={data.contentfulAboutMe.gmail} />
   </Layout>
 )
 
