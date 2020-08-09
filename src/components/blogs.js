@@ -1,7 +1,8 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import { Link } from 'gatsby'
-import moment from 'moment'
+
+import { formatToIntl } from '../utils/formatDate'
 
 const Blogs = ({ data }) => (
   <div className="blogs-section section" id="blog">
@@ -30,7 +31,7 @@ const Blogs = ({ data }) => (
                 <h3 className="title">{item.node.title}</h3>
                 <span className="date">
                   <i className="fas fa-calendar-alt"></i>{' '}
-                  {moment(item.node.createdAt).format('LL')}
+                  {formatToIntl(item.node.createdAt)}
                 </span>
               </div>
             </div>
@@ -38,7 +39,7 @@ const Blogs = ({ data }) => (
         ))}
       </ul>
       <div className="see-more">
-        <Link to="/blogs">
+        <Link to="/blog">
           <span>Mais</span>
         </Link>
       </div>

@@ -4,7 +4,7 @@ const Service = ({ data }) => (
   <div className="service section" id="services">
     <div className="container">
       <div className="section-head">
-        <h2>Service</h2>
+        <h2>Serviços</h2>
       </div>
       <div className="row">
         {data.edges.map((item, index) => (

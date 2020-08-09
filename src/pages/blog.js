@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
-import moment from 'moment'
+import { formatToIntl } from '../utils/formatDate'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -39,7 +39,7 @@ const Blog = ({ data }) => (
                   <h3 className="title">{item.node.title}</h3>
                   <span className="date">
                     <i className="fas fa-calendar-alt"></i>{' '}
-                    {moment(item.node.createdAt).format('LL')}
+                    {formatToIntl(item.node.createdAt)}
                   </span>
                 </div>
               </div>
