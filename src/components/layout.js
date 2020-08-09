@@ -24,7 +24,10 @@ const Layout = ({ children, header }) => (
               url
             }
           }
-          menus
+          sections {
+            label
+            name
+          }
         }
       }
     `}

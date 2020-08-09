@@ -4,10 +4,10 @@ import { Link } from 'gatsby'
 import moment from 'moment'
 
 const Blogs = ({ data }) => (
-  <div className="blogs-section section" id="Blogs">
+  <div className="blogs-section section" id="blog">
     <div className="container">
       <div className="section-head">
-        <h2>Blogs</h2>
+        <h2>Blog</h2>
       </div>
       <ul
         className={`blogs-list ${data.edges.length < 5 ? 'few-blogs' : ''}`}
@@ -39,7 +39,7 @@ const Blogs = ({ data }) => (
       </ul>
       <div className="see-more">
         <Link to="/blogs">
-          <span>More Blogs</span>
+          <span>Mais</span>
         </Link>
       </div>
     </div>

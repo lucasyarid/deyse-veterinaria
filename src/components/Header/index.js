@@ -27,10 +27,10 @@ export const Header = ({ data, header }) => {
 
           <div className="menu">
             <ul onClick={closeMenu}>
-              {data.menus.map((menu, key) =>
+              {data.sections.map((section, key) =>
                 <MenuItem
                   key={key}
-                  page={menu}
+                  page={section}
                 />
               )}
             </ul>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
@@ -8,30 +8,60 @@ import Banner from '../components/banner'
 import About from '../components/about'
 import Service from '../components/service'
 import Blogs from '../components/blogs'
-import Testimonial from '../components/testimonial'
 import Contact from '../components/contact'
-import Photos from '../components/photos'
 
-const IndexPage = ({ data }) => (
-  <Layout header="home">
-    <SEO title={data.contentfulAboutMe.designation} />
+const IndexPage = ({ data }) => {
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
-    <Banner data={data.contentfulAboutMe} />
+  const components = {
+    about: {
+      Component: About,
+      props: {
+        data: data.contentfulAboutMe,
+        details: data.allContentfulDetails.edges
+      }
+    },
+    services: {
+      Component: Service,
+      props: {
+        data: data.allContentfulService
+      }
+    },
+    blog: {
+      Component: Blogs,
+      props: {
+        data: data.allContentfulBlogs
+      }
+    },
+    contact: {
+      Component: Contact,
+      props: {
+        data: data.contentfulAboutMe.gmail
+      }
+    }
+  }
 
-    <About
-      data={data.contentfulAboutMe}
-      details={data.allContentfulDetails.edges}
-    />
+  const sections = () => data.contentfulSiteInformation.sections
+    .map(({ name }) => {
+      const sectionComponent = components[name]
+      if (!sectionComponent) return
+      const { Component, props } = sectionComponent
 
-    <Service data={data.allContentfulService} />
+      return <Component key={name} {...props} />
+    })
 
-    <Blogs data={data.allContentfulBlogs} />
+  return (
+    <Layout header="home">
+      <SEO title={data.contentfulAboutMe.designation} />
 
-    <Photos data={data.contentfulPhotos} />
+      <Banner data={data.contentfulAboutMe} />
 
-    <Contact data={data.contentfulAboutMe.gmail} />
-  </Layout>
-)
+      { sections() }
+    </Layout>
+  )
+}
 
 export default IndexPage
 
@@ -155,7 +185,10 @@ export const pageQuery = graphql`
       }
     }
     contentfulSiteInformation {
-      menus
+      sections {
+        label
+        name
+      }
     }
   }
 `

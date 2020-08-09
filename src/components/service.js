@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Service = ({ data }) => (
-  <div className="service section" id="Service">
+  <div className="service section" id="services">
     <div className="container">
       <div className="section-head">
         <h2>Service</h2>

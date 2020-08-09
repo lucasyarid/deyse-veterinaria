@@ -7,7 +7,7 @@ const About = ({ data, details }) => {
   const mappedDetails = details.map(detail => detail.node)
 
   return (
-    <div className="about section" id="About">
+    <div className="about section" id="about">
       <div className="container">
         <div className="about-main row">
           <div className="left col-md-5 col-lg-4 mb-3">
